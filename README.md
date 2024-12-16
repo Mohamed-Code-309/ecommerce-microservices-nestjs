@@ -4,8 +4,8 @@
 - we have 4 microservice (products, orders, categories and users)
 - each one has it's own database
 - communication is done through RabbitMQ
-
-![micro-arch](https://github.com/user-attachments/assets/f7e2ac80-3cdd-4dd9-a4c9-94fedbd37289)
+  
+![micro-arch](https://github.com/user-attachments/assets/b694f25b-a5c6-49cb-af73-c2216cb26109)
 
 ## Event-Based Communication Style Examples:
 
