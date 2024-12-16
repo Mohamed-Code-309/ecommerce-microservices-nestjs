@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Product 1",
+      "description": "Description for Product 1",
+      "image": ["image1.jpg", "image2.jpg"],
+      "price": 50,
+      "category": "Electronics",
+      "tags": ["gadget", "tech"],
+      "stock": 100
+    },
+    {
+      "title": "Product 2",
+      "description": "Description for Product 2",
+      "image": ["image3.jpg", "image4.jpg"],
+      "price": 100,
+      "category": "Electronics",
+      "tags": ["device", "innovation"],
+      "stock": 200
+    },
+    {
+      "title": "Product 3",
+      "description": "Description for Product 3",
+      "image": ["image5.jpg"],
+      "price": 49.99,
+      "category": "Books",
+      "tags": ["reading", "education"],
+      "stock": 50
+    },
+    {
+      "title": "Product 4",
+      "description": "Description for Product 4",
+      "image": ["image6.jpg"],
+      "price": 9.99,
+      "category": "Accessories",
+      "tags": ["fashion", "style"],
+      "stock": 30
+    }
+  ]
+  

@@ -1,0 +1,62 @@
+version: '3.4'
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    volumes:
+      - /var/lib/rabbitmq
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+
+  products_db:
+    image: postgres
+    container_name: products_db
+    restart: always
+    env_file:
+      - ./apps/products/.env
+    ports:
+      - "5432:5432"
+    volumes:
+      - products_data:/var/lib/postgresql/data
+
+  orders_db:
+    image: postgres
+    container_name: orders_db
+    restart: always
+    env_file:
+      - ./apps/orders/.env
+    ports:
+      - "6432:5432"
+    volumes:
+      - orders_data:/var/lib/postgresql/data
+  
+  categories-db:
+    image: mongo
+    container_name: categories-db
+    env_file:
+      - ./apps/categories/.env
+    ports:
+      - '27018:27017'
+    volumes:
+      - categories_data:/data/db
+
+  users-db:
+    image: mongo
+    container_name: users-db
+    env_file:
+      - ./apps/users/.env
+    ports:
+      - '27019:27017'
+    volumes:
+      - users_data:/data/db
+
+
+volumes:
+  products_data:
+  orders_data:
+  categories_data:
+  users_data:
